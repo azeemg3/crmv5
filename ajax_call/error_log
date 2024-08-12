@@ -1,0 +1,7 @@
+[14-Oct-2022 02:11:21 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home1/mazhar/public_html/crmv4/ajax_call/pending_noti.php on line 6
+[15-Oct-2022 01:28:40 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home1/mazhar/public_html/crmv4/ajax_call/pending_noti.php on line 6
+[15-Oct-2022 03:08:26 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home1/mazhar/public_html/crmv4/ajax_call/pending_noti.php on line 6
+[15-Oct-2022 03:08:29 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home1/mazhar/public_html/crmv4/ajax_call/pending_noti.php on line 6
+[15-Oct-2022 04:59:23 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home1/mazhar/public_html/crmv4/ajax_call/pending_noti.php on line 6
+[15-Oct-2022 04:59:24 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home1/mazhar/public_html/crmv4/ajax_call/pending_noti.php on line 6
+[17-Oct-2022 04:41:15 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home1/mazhar/public_html/crmv4/ajax_call/pending_noti.php on line 6

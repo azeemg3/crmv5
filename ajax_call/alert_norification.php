@@ -1,0 +1,9 @@
+<?php
+require_once'../inc.func.php';
+session_start();
+if(isset($_GET['alert']))
+{
+	$alert=$_GET['alert'];
+	$cm->update("user","alert_notification='$alert'","id=".$_SESSION['sessionId']."");
+}
+?>

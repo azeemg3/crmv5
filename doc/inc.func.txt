@@ -1,0 +1,2 @@
+//Fetch all the country codes with the funciton get_c_c();
+function get_cc()
