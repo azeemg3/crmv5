@@ -14,16 +14,16 @@ class tourSale extends crm
 	}
 	function visaSupp()
 	{
-		$list="";
-		$query=$this->selectData("tour_visa", "visaSuppName!='' GROUP BY visaSuppName");
-		if($query)
-		{
-		while($row=$query->fetch_assoc())
-		{
-			$list.= '<option value="'.$row['visaSuppName'].'">';
-		}
-		return $list;
-		}
+		return $list="";
+		// $query=$this->selectData("tour_visa", "visaSuppName!='' GROUP BY visaSuppName");
+		// if($query)
+		// {
+		// while($row=$query->fetch_assoc())
+		// {
+		// 	$list.= '<option value="'.$row['visaSuppName'].'">';
+		// }
+		// return $list;
+		// }
 	}
 	// tour hotel names
 	function tour_hn()

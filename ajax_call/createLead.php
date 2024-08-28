@@ -67,47 +67,47 @@ if($mobile==$cm->u_value("lead", "mobile", "mobile='".$mobile."' AND branch_id="
               	<tbody>
                 	<tr>
                     	<th>Prefered Airline</th>
-                        <td>'.$cm->emptyWord($ti_row['pref_airline']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['pref_airline']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Prefered Class Of Travel</th>
-                        <td>'.$cm->emptyWord($ti_row['pref_class']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['pref_class']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Prefered Destination</th>
-                        <td>'.$cm->emptyWord($ti_row['pref_destination']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['pref_destination']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Prefered Seat</th>
-                        <td>'.$cm->emptyWord($ti_row['pref_seat']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['pref_seat']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Prefered Meal</th>
-                        <td>'.$cm->emptyWord($ti_row['pref_meal']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['pref_meal']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Airline Membership</th>
-                        <td>'.$cm->emptyWord($ti_row['airline_membership']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['airline_membership']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Frequent Fly Card</th>
-                        <td>'.$cm->emptyWord($ti_row['fre_fly_card']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['fre_fly_card']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Travel Docment Details</th>
-                        <td>'.$cm->emptyWord($ti_row['travel_doc_det']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['travel_doc_det']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Luggage Information</th>
-                        <td>'.$cm->emptyWord($ti_row['lugg_info']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['lugg_info']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Airport Transport</th>
-                        <td>'.$cm->emptyWord($ti_row['air_trans']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['air_trans']??"").'</td>
                     </tr>
                     <tr>
                     	<th>Prefered Hotel</th>
-                        <td>'.$cm->emptyWord($ti_row['pref_hotel']).'</td>
+                        <td>'.$cm->emptyWord($ti_row['pref_hotel']??"").'</td>
                     </tr>
                 </tbody>
               </table>

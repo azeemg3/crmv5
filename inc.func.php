@@ -1645,8 +1645,9 @@ class crm {
 	}
 	public static function countries($country_id=0)
 	{
+		$crm=new crm();
 		$list="";
-		$result=$this->selectData("countries", "1");
+		$result=$crm->selectData("countries", "1");
 		while($row=$result->fetch_assoc())
 		{
 			$list.='<option value="'.$row['country_code'].'" '.(($row['country_code']==$country_id)?'selected':"".(($row['country_code']==92)?'selected':"")."").'>'.$row['country_name'].'</option>';

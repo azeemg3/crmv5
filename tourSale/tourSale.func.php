@@ -5,21 +5,21 @@ class tourSale extends crm
 	public $fetcol;
 	function fetchData($query)
 	{
-		$row=mysql_fetch_array($query);
+		$row=mysqli_fetch_array($query);
 		return $row;
 	}
 	function col($col)
 	{
 		return $this->fetcol[$col];
 	}
-	function visaSupp()
+	public static function visaSupp()
 	{
 		$list="";
-		$query=$this->selectData("tour_visa", "visaSuppName!='' GROUP BY visaSuppName");
-		while($row=mysql_fetch_array($query))
-		{
-			$list.= '<option value="'.$row['visaSuppName'].'">';
-		}
+		// $query=$this->selectData("tour_visa", "visaSuppName!='' GROUP BY visaSuppName");
+		// while($row=mysqli_fetch_array($query))
+		// {
+		// 	$list.= '<option value="'.$row['visaSuppName'].'">';
+		// }
 		return $list;
 	}
 	// tour hotel names

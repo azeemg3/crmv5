@@ -185,7 +185,7 @@ elseif(isset($_GET['leadId']) && !empty($_GET['leadId']))
                           <label>Country</label>
                           <select class="form-control select2" name="country_id" onChange="select_city(this.value)">
                           	<option value="">Select Country</option>
-                          	<?php echo $cm->countries($row['country_code']); ?>
+                          	<?php echo $cm->countries($row['country_code']??0); ?>
                           </select>
                        </div>
                     <!-- form--group-->
