@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+/public/storage
+.env
+.env.backup
+/storage/*.key
+inf.func.php
