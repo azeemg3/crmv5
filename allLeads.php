@@ -134,12 +134,13 @@ if(isset($_GET['status']) && $_GET['status']!=="update")
                                     <thead>
                                         <tr class="bg-green-gradient" style="box-shadow:0px 0 1px #777 inset;margin-top:20px;">
                                             <th>#</th>
-                                            <th>L.Id</th>
+                                            <th><span data-toggle="tooltip" data-placement="top" title="Lead Number">L.Id</span></th>
                                             <th width="15%">Contact Name</th>
                                             <th>Mobile No</th>
                                             <th>Spo Name</th>
                                             <th>Status</th>
-                                            <th>Travel Date</th>
+                                            <th><span data-toggle="tooltip" data-placement="top" title="Travel Date From">TDF</span></th>
+                                            <th><span data-toggle="tooltip" data-placement="top" title="Travel Date To">TDT</span></th>
                                             <th>Services</th>
                                             <th>Balance</th>
                                             <th width="15%">Action</th>
@@ -167,6 +168,9 @@ $(function () {
         //Initialize Select2 Elements
         $(".select2").select2();
 		});
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
 </script>
     <?php
 

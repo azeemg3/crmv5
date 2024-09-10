@@ -14,7 +14,7 @@ if(isset($_POST['per_page']) && !empty($_POST['per_page']))
 	$per_page=$_POST['per_page'];
 }
 else{ 
-$per_page=10;
+$per_page=50;
 }
 $cur_page = $page;
 $page -=1;

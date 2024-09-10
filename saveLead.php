@@ -1,12 +1,12 @@
 <?php
 session_start();
-ob_start();
-ob_clean();
+// ob_start();
+// ob_clean();
 require_once'inc.func.php';
 $c_m=new crm();
 $lead=new lead();
 $id="";
-$branch=$c_m->u_value("branches", "branch_name", "branch_id=".$_SESSION['branch_id']."");;
+$branch=$c_m->u_value("branches", "branch_name", "branch_id=".$_SESSION['branch_id']."");
 if(isset($_POST['id']) && !empty($_POST['id']))
 {
 	$id=$_POST['id'];

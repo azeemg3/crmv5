@@ -64,7 +64,7 @@ elseif(isset($_GET['leadId']) && !empty($_GET['leadId']))
         <div class="panel panel-default" style="margin-bottom:0px !important;">
             <div class="panel-body">
             	<form action="saveLead" method="post">
-               <input type="hidden" name="id" value="<?php echo $row['id'] ?>" />
+               <input type="hidden" name="id" value="<?php echo $row['id']??"" ?>" />
             	<div class="col-lg-12 col-sm-12 col-xs-12">
                 <div class="col-lg-4 col-sm-6">
                     <div class="form-group">

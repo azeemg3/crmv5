@@ -16,7 +16,7 @@ if($cm->user_access("viewAllLeads", $_SESSION['sessionId']))
 		$per_page=$_POST['per_page'];
 	}
 	else{ 
-	$per_page=10;
+	$per_page=30;
 	}
 	$cur_page = $page;
 	$page -=1;
@@ -95,6 +95,6 @@ if($cm->user_access("viewAllLeads", $_SESSION['sessionId']))
 		echo $cm->nothing_found($leadId, '10');
 	}
 	//if($total_rec>10)
-	echo '<tr><td colspan="10">'.$cm->pagination($total_rec, $cur_page, $per_page, "get_allLeads").'</td></tr>';
+	echo '<tr><td colspan="11">'.$cm->pagination($total_rec, $cur_page, $per_page, "get_allLeads").'</td></tr>';
 }
 ?>
