@@ -13,7 +13,7 @@ class lead extends crm
 		}
 		else
 		{
-			return $this->count_val('lead', 'id', 'status="'.$status.'" AND spo='.$userId.' AND branch_id='.$userBranch.'');
+			return $this->count_val('lead', 'id', 'status="pending" AND spo='.$userId.' AND branch_id='.$userBranch.'');
 		}
 	}
 	// count all leads

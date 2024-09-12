@@ -11,9 +11,9 @@ class crm {
 
     function db() {
         $servername = 'localhost';
-        $username = "root";
-        $password = "";
-        $db = "crmv4";
+        $username = "u948502898_crmv5";
+        $password = "O8CNY~qV!M6w";
+        $db = "u948502898_crmv5";
         // Create connection
         $conn = new mysqli($servername, $username, $password, $db);
         // Check connection
@@ -1517,10 +1517,12 @@ class crm {
 			 curl_setopt($ch, CURLOPT_POSTFIELDS, $data); 
 			 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 			 $result = curl_exec($ch); //This is the result from SMS4CONNECT cu
-			 $xml=simplexml_load_string($result) or die("Error: Cannot create object");
-			 $columns=array("code, mobile, message, date, userId, branch");
-			 $values=array($xml->code, $to, $message, $this->current_dt(), $_SESSION['sessionId'], $_SESSION['branch_id'] );
-			 $this->insertData("sms_status", $columns, $values);
+			 //$xml=simplexml_load_string($result) or die("Error: Cannot create object");
+			 $xml=simplexml_load_string($result);
+			//  $columns=array("code, mobile, message, date, userId, branch");
+			//  $values=array($xml->code, $to, $message, $this->current_dt(), $_SESSION['sessionId'], $_SESSION['branch_id'] );
+			//  print_r($values);exit;
+			//  $this->insertData("sms_status", $columns, $values);
 			}
 			else
 			{
