@@ -24,7 +24,7 @@ if($file=='tourVisa')
 		$dataArray['branch_id']=$_SESSION['branch_id'];
 		$dataArray['vt']='DN';
 		if(!empty($_POST['id'])){$id=$_POST['id'];}
-		if($id==0 && $id=="")
+		if($id==0 || $id=="")
 		{
 		$data['trans_code']=$administrator->trans_code();
 		$cm->insert_array("tour_visa", $data, "uniqueId, branch, spo, userId, date, time, leadId", "'".$uniqueId."', ".$branch.", 
@@ -65,7 +65,7 @@ else if($file=='tourHotel')
 		$dataArray['branch_id']=$_SESSION['branch_id'];
 		$dataArray['vt']='DN';
 		if(!empty($_POST['id'])){$id=$_POST['id'];}
-		if($id==0 && $id=="")
+		if($id==0 || $id=="")
 		{
 		$values['trans_code']=$administrator->trans_code();
 		$cm->insert_array("tour_hotel", $values, "uniqueId, userId, date, spo, leadId, branch", "'".$uniqueId."', 
@@ -105,7 +105,7 @@ else if($file=='tourTrans')
 		$dataArray['branch_id']=$_SESSION['branch_id'];
 		$dataArray['vt']='DN';
 	if(!empty($_POST['id'])){$id=$_POST['id'];}
-		if($id==0 && $id=="")
+		if($id==0 || $id=="")
 		{
 			$values['trans_code']=$administrator->trans_code();
 			$cm->insert_array("tour_transport", $values, "uniqueId, userId, branch, leadId, date", "'".$uniqueId."', ".$_SESSION['sessionId'].", 
@@ -145,7 +145,7 @@ else if($file=="tourTour")
 		$dataArray['branch_id']=$_SESSION['branch_id'];
 		$dataArray['vt']='DN';
 		if(!empty($_POST['id'])){$id=$_POST['id'];}
-		if($id==0 && $id=="")
+		if($id==0 || $id=="")
 		{
 			$values['trans_code']=$administrator->trans_code();
 	$cm->insert_array("tour_tour", $values, "uniqueId, userId, branch, leadId, date", "'".$uniqueId."', ".$_SESSION['sessionId'].", 
@@ -184,7 +184,7 @@ else if($file=="tourOther")
 		$dataArray['branch_id']=$_SESSION['branch_id'];
 		$dataArray['vt']='DN';
 		if(!empty($_POST['id'])){$id=$_POST['id'];}
-		if($id==0 && $id==""){
+		if($id==0 || $id==""){
 			$values['trans_code']=$administrator->trans_code();
 		$cm->insert_array("tour_other", $values, "uniqueId, userId, branch, leadId", "'".$uniqueId."', ".$_SESSION['sessionId'].", 
 		".$branch.", ".$leadId."");
