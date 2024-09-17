@@ -1,3 +1,4 @@
+
 <?php 
 require_once'inc.func.php';
 $cm->get_header("");
@@ -251,6 +252,9 @@ else if(!empty($_GET['userid']))
             <label class="checkbox-inline">
               <input type="checkbox" value="viewAllLeads" name="actions[]" <?php if(in_array('viewAllLeads', $actions)): echo ' checked="checked"'; endif; ?>>
               View All Leads </label>
+              <label class="checkbox-inline">
+                  <input type="checkbox" value="agentLeads" name="actions[]" <?php if(in_array('agentLeads', $actions)): echo ' checked="checked"'; endif; ?>>
+                  Agent Leads </label>
               <label class="checkbox-inline">
               <input type="checkbox" value="edit" name="actions[]" <?php if(in_array('edit', $actions)): echo ' checked="checked"'; endif; ?>>
               Edit </label>

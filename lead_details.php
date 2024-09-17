@@ -536,9 +536,7 @@ $cm->user_access("reopenLead", $_SESSION['sessionId'])){ ?>
         <div class="col-lg-4 col-sm-4">
           <table class="table">
             <tbody>
-              <tr>
-                <td><b>Branch:</b> <?php echo $cm->u_value("branches", "branch_name", "branch_id=".$row['branch_id']."") ?></td>
-              </tr>
+            
               <tr>
                 <td><b>Transfer To:</b>
                   <select onChange="lead_transfer(<?php echo $leadId ?>)" name="t_t_spo" id="t_t_spo">
@@ -565,15 +563,29 @@ $cm->user_access("reopenLead", $_SESSION['sessionId'])){ ?>
               </tr>
               <?php } ?>
               <tr>
-                <td><button type="button" class="btn btn-primary btn-xs btn-flat" onClick="set_reminder()"><i class="fa fa-fw fa-bell-o"></i> Set Reminder</button></td>
+                <td><button type="button" class="btn btn-primary btn-xs btn-flat" onClick="set_reminder()"><i class="fa fa-fw fa-bell-o"></i> Set Reminder</button>
+                </td>
               </tr>
               <tr>
-                <td style="padding:2px; padding-left:10px;"><b> Priority leve:</b>
-                  <label style="font-weight:200 !important;">High
+                <td>
+                <b>Recent Reminder</b>:  <?php echo $cm->u_value("reminder", "reminder_date","status='pending' AND leadId=".$leadId." ORDER BY id DESC LIMIT 1") ?> 
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:2px; padding-left:10px;"><b> Priority Level:</b>
+                <label style="font-weight:200 !important;"> Urgent
+                    <input type="checkbox" class="lead-pr" 
+				<?php if($row['lp']=="urgent") echo "checked" ?> value="urgent-<?php echo $leadId?>">
+                  </label>
+                  <label style="font-weight:200 !important;"> High
                     <input type="checkbox" class="lead-pr" 
 				<?php if($row['lp']=="high") echo "checked" ?> value="high-<?php echo $leadId?>">
                   </label>
-                  <label style="font-weight:200 !important;">Low
+                  <label style="font-weight:200 !important;"> Medium
+                    <input type="checkbox" class="lead-pr" 
+				<?php if($row['lp']=="medium") echo "checked" ?> value="medium-<?php echo $leadId?>">
+                  </label>
+                  <label style="font-weight:200 !important;"> Low
                     <input type="checkbox" value="low-<?php echo $leadId?>" class="lead-pr" <?php if($row['lp']=="low") echo "checked" ?>>
                   </label></td>
               </tr>
